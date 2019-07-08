@@ -1,8 +1,8 @@
 // fetching data
 // key = 0effd2db9fd35814bdee882537232e55
 //getting data
-import renderWeathers from './render'
-import getInfo from './getInfo'
+import renderWeathers from './render.js'
+import getInfo from './getInfo.js'
 
 
 
@@ -20,15 +20,3 @@ const cityChanging = async (ev) => {
 
 
 select.addEventListener("change",cityChanging)
-
-
-
-
-//making weather blocks
-
-const weathersMain = document.getElementById("weathersMain");
-
-let weatherElemTemplate
-document.getElementById("weathersMain").innerHTML = `<h1>asds</h1>`
-
-document.getElementById("weathersMain").innerHTML = weatherElemTemplate
