@@ -12,9 +12,11 @@ const makeElem = (iconName,temp,date) => {
 export default function(data){
   data.then(data=>{
     let all = ""
-    data.forEach(({icon,temp,date}) => {
+    data[1].forEach(({icon,temp,date}) => {
       all+= makeElem(icon,temp,date)
     })
+    document.querySelector("#cityName h3").innerHTML = data[0]
+
     document.getElementById("weathersMain").innerHTML = all
     console.log(all)
     

@@ -54,7 +54,11 @@ body {
 #weathersMain .weather .texts h4 {
     margin-bottom: 4px;
 }
-
+#cityName h3 {
+    text-align: center;
+    color: white;
+    margin-bottom: 5px;
+}
 
 #load {
     margin-top: 20px;
