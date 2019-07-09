@@ -1,16 +1,22 @@
-const makeElem = (iconName,temp) => {
+const makeElem = (iconName,temp,date) => {
   return `<div class = "weather">
     <img src="http://openweathermap.org/img/wn/${iconName}@2x.png" />
-    <h4>${temp} C°</h4>
+    <div class = "texts">
+      <h4>${temp} C°</h4>
+      <h5>${date}</h5>
+    </div>
   </div>`
 }
 
 
 export default function(data){
-  let all = ""
-  data.forEach(elem => {
-    all+= makeElem(elem.icon,elem.temp)
+  data.then(data=>{
+    let all = ""
+    data.forEach(({icon,temp,date}) => {
+      all+= makeElem(icon,temp,date)
+    })
+    document.getElementById("weathersMain").innerHTML = all
+    console.log(all)
+    
   })
-  document.getElementById("weathersMain").innerHTML = all
-  console.log(all)
 }
